@@ -37,12 +37,9 @@ En el ejercicio debemos evaluar una secuencia de ADN presentada como un arrary d
         "TTTTGT",
         "ATCCAT",
         "CCAAGA",
-        "GTGATT"
+        "GTGATT"]}
 
-    ]
-  }
-
-Se analizan las secuencias dadas para determinar si la persona es mutante.
+  Se analizan las secuencias dadas para determinar si la persona es mutante.
 
   GET /stats:
 
