@@ -28,7 +28,7 @@ En el ejercicio debemos evaluar una secuencia de ADN presentada como un arrary d
 
 - Endpoints
 
-  POST /mutant:
+  1. POST /mutant:
 
    {
     "dna": [
@@ -41,7 +41,7 @@ En el ejercicio debemos evaluar una secuencia de ADN presentada como un arrary d
 
   Se analizan las secuencias dadas para determinar si la persona es mutante.
 
-  GET /stats:
+  2. GET /stats:
 
   Según los resultados anteriormente almacenados nos dice la relacón proporcional entre humanos y mutantes, dividiendo 
   mutantes entre humanos.
