@@ -25,3 +25,29 @@ Exponer un servicio extra “/stats” que devuelva un Json con las estadística
 # Resolución:
 
 En el ejercicio debemos evaluar una secuencia de ADN presentada como un arrary de strings que solo permite cuatro caracteres; A, C, G o T. Se considera que el ADN es mutante al contener mas de una secuencia de estos cuatro caracteres consecutivos en cualquier dirección. 
+
+- Endpoints
+
+  POST /mutant:
+
+   {
+    "dna": [
+        "ATATGA",
+        "AAGGGA",
+        "TTTTGT",
+        "ATCCAT",
+        "CCAAGA",
+        "GTGATT"
+
+    ]
+  }
+
+Se analizan las secuencias dadas para determinar si la persona es mutante.
+
+  GET /stats:
+
+  Según los resultados anteriormente almacenados nos dice la relacón proporcional entre humanos y mutantes, dividiendo 
+  mutantes entre humanos.
+
+
+
