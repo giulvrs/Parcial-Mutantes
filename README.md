@@ -1,7 +1,7 @@
 # Parcial-Mutantes
 Desarrollo de Software - 3K9 - Ranzuglia Giuliana 50141
 
-Consignas:
+# Consignas:
 Crear un programa con un método o función con la siguiente firma:
 
 boolean isMutant(String[] dna);
@@ -16,18 +16,12 @@ Desafíos:
 Programa  en java spring boot que cumpla con el método pedido por Magneto utilizando una arquitectura en capas de controladores, servicios y repositorios.
 
 - Nivel 2:
-Crear una API REST, hostear esa API en un cloud computing libre (Render), crear el servicio “/mutant/” en donde se pueda detectar si un humano es mutante enviando la secuencia de ADN mediante un HTTP POST con un Json el cual tenga el siguiente formato:
-
-POST → /mutant/
-{ “dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}
-
-En caso de verificar un mutante, debería devolver un HTTP 200-OK, en caso contrario un 403-Forbidden
+Crear una API REST, hostear esa API en un cloud computing libre (Render), crear el servicio “/mutant/” en donde se pueda detectar si un humano es mutante enviando la secuencia de ADN mediante un HTTP POST con un Json el cual tenga el siguiente formato: POST → /mutant/ { “dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}. En caso de verificar un mutante, debería devolver un HTTP 200-OK, en caso contrario un 403-Forbidden
 
 - Nivel 3:
 Anexar una base de datos en H2, la cual guarde los ADN’s verificados con la API. Solo 1 registro por ADN.
-Exponer un servicio extra “/stats” que devuelva un Json con las estadísticas de las verificaciones de ADN: {“count_mutant_dna”:40, “count_human_dna”:100: “ratio”:0.4}
+Exponer un servicio extra “/stats” que devuelva un Json con las estadísticas de las verificaciones de ADN: {“count_mutant_dna”:40, “count_human_dna”:100: “ratio”:0.4} Tener en cuenta que la API puede recibir fluctuaciones agresivas de tráfico (Entre 100 y 1 millón de peticiones por segundo). Utilizar Jmeter. Test-Automáticos, Code coverage > 80%, Diagrama de Secuencia / Arquitectura del sistema.
 
-Tener en cuenta que la API puede recibir fluctuaciones agresivas de tráfico (Entre 100 y 1 millón de peticiones por segundo). Utilizar Jmeter 
+# Resolución:
 
-Test-Automáticos, Code coverage > 80%, Diagrama de Secuencia / Arquitectura del sistema.
-
+En el ejercicio debemos evaluar una secuencia de ADN presentada como un arrary de strings que solo permite cuatro caracteres; A, C, G o T. Se considera que el ADN es mutante al contener mas de una secuencia de estos cuatro caracteres consecutivos en cualquier dirección. 
