@@ -44,9 +44,9 @@ public class MutanteControllerTest {
     @Test
     void testValidNotMutantMatrix() throws Exception{
         String[] dna = {
-                "ATG",
-                "CAG",
-                "TCA",
+                "AGA",
+                "CTG",
+                "GCA",
         };
 
 
@@ -66,10 +66,10 @@ public class MutanteControllerTest {
     @Test
     void testValidMutantMatrix() throws Exception {
         String[] dna = {
-                "AAAA",
-                "CAGA",
-                "TCAA",
-                "AAAA",
+                "GGGG",
+                "CGAG",
+                "TCGG",
+                "GGGG",
         };
 
         MutanteDto mutanteDto = new MutanteDto();
@@ -88,9 +88,9 @@ public class MutanteControllerTest {
     @Test
     void testInvalidMutantDnaFormatNxM() throws Exception {
         String[] dna = {
-                "ATTG",
+                "ATTA",
                 "CAGT",
-                "TCAA",
+                "TCA",
                 "GCTG",
         };
 
