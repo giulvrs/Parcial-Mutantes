@@ -31,21 +31,7 @@ public class MutanteServiceTest {
     }
 
 
-    @Test
-    void test6x6MatrixIsMutantByDiagonals(){
-
-        String[] dna = {
-                "ATGCGA",
-                "CAGTGC",
-                "TCATGT",
-                "AGCAGG",
-                "CCACBC",
-                "TCACTA"
-        };
-
-        testHelper(dna, true);
-
-    }
+ 
 
     @Test
     void test4x4MatrixIsMutantByColAndDiagonal(){
@@ -69,6 +55,33 @@ public class MutanteServiceTest {
         testHelper(dna, true);
     }
 
+      @Test
+    void test4x4MatrixIsNotMutant(){
+        String[] dna = {
+                "ATGC",
+                "CAGT",
+                "TCAT",
+                "AGCB",
+        };
+        testHelper(dna, false);
+    }
+
+       @Test
+    void test6x6MatrixIsMutantByDiagonals(){
+
+        String[] dna = {
+                "ATAAGA",
+                "CATCGC",
+                "GCATGT",
+                "AGCAGG",
+                "CCACBC",
+                "GTACCA"
+        };
+
+        testHelper(dna, true);
+
+    }
+
     @Test
     void test6x6MatrixIsNotMutant(){
         String[] dna = {
@@ -82,23 +95,13 @@ public class MutanteServiceTest {
         testHelper(dna, false);
     }
 
-    @Test
-    void test4x4MatrixIsNotMutant(){
-        String[] dna = {
-                "ATGC",
-                "CAGT",
-                "TCAT",
-                "AGCB",
-        };
-        testHelper(dna, false);
-    }
 
     @Test
     void testLessThan4DimMatrixIsNotMutant() {
         String[] dna = {
-                "ATG",
-                "CAG",
-                "TCA",
+                "TCG",
+                "CAT",
+                "GGA",
         };
         testHelper(dna, false);
     }
@@ -155,8 +158,8 @@ public class MutanteServiceTest {
     @Test
     void testDnaAnalyzerWithNLessThan4Dna() throws Exception{
         String[] dna = {
+                "AGT",
                 "AAA",
-                "ATG",
                 "ATA",
         };
 
@@ -171,8 +174,8 @@ public class MutanteServiceTest {
     @Test
     void testDnaAnalyzerAlreadyInDB() throws Exception{
         String[] dna = {
+                "AGT",
                 "AAA",
-                "ATG",
                 "ATA",
         };
 
