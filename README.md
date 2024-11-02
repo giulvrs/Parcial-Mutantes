@@ -26,7 +26,7 @@ Exponer un servicio extra “/stats” que devuelva un Json con las estadística
 
 En el ejercicio debemos evaluar una secuencia de ADN presentada como un arrary de strings que solo permite cuatro caracteres; A, C, G o T. Se considera que el ADN es mutante al contener mas de una secuencia de estos cuatro caracteres consecutivos en cualquier dirección. 
 
-- Endpoints
+- Endpoints -
   Link de la aplicación de render: https://parcial-mutantes-rh7k.onrender.com
   
   1. POST /mutant:
