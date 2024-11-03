@@ -33,14 +33,16 @@ En el ejercicio debemos evaluar una secuencia de ADN presentada como un arrary d
   
   1. POST /mutant:
 
-   {
+{
     "dna": [
-        "ATATGA",
-        "AAGGGA",
-        "TTTTGT",
-        "ATCCAT",
-        "CCAAGA",
-        "GTGATT"]}
+        "ATGCGA",
+        "AATAAA",
+        "ACATGT",
+        "ATCAAT",
+        "ACATAA",
+        "TCTCTT"
+    ]
+}
 
   Se analizan las secuencias dadas para determinar si la persona es mutante.
 
